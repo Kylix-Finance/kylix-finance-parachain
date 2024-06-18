@@ -3,6 +3,7 @@ Based on https://github.com/paritytech/polkadot-sdk-parachain-template
 Current status:
    -    code builds
    -    lending pallet not integrated into the runtime
+   -    all "parachain-template" occurences need to be changed to kylix
 # delete this block after finishing up #
 
 
