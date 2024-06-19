@@ -4204,7 +4204,7 @@ dependencies = [
  "iana-time-zone-haiku",
  "js-sys",
  "wasm-bindgen",
- "windows-core 0.52.0",
+ "windows-core",
 ]
 
 [[package]]
@@ -4704,27 +4704,6 @@ name = "lazycell"
 version = "1.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "830d08ce1d1d941e6b30645f1a0eb5643013d835ce3779a5fc208261dbe10f55"
-
-[[package]]
-name = "lending"
-version = "4.0.0-dev"
-dependencies = [
- "frame-benchmarking 4.0.0-dev",
- "frame-support 4.0.0-dev",
- "frame-system 4.0.0-dev",
- "frame-system-rpc-runtime-api 4.0.0-dev",
- "frame-try-runtime 0.10.0-dev",
- "log",
- "pallet-assets 4.0.0-dev",
- "pallet-balances 4.0.0-dev",
- "pallet-timestamp 4.0.0-dev",
- "pallet-transaction-payment-rpc-runtime-api 4.0.0-dev",
- "parity-scale-codec",
- "scale-info",
- "sp-core 21.0.0",
- "sp-io 23.0.0",
- "sp-runtime 24.0.0",
-]
 
 [[package]]
 name = "libc"
@@ -6967,6 +6946,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "pallet-lending"
+version = "4.0.0-dev"
+dependencies = [
+ "frame-benchmarking 4.0.0-dev",
+ "frame-support 4.0.0-dev",
+ "frame-system 4.0.0-dev",
+ "frame-system-rpc-runtime-api 4.0.0-dev",
+ "frame-try-runtime 0.10.0-dev",
+ "log",
+ "pallet-assets 4.0.0-dev",
+ "pallet-balances 4.0.0-dev",
+ "pallet-timestamp 4.0.0-dev",
+ "pallet-transaction-payment-rpc-runtime-api 4.0.0-dev",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-core 21.0.0",
+ "sp-io 23.0.0",
+ "sp-runtime 24.0.0",
+]
+
+[[package]]
 name = "pallet-membership"
 version = "34.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -7790,12 +7790,13 @@ dependencies = [
  "frame-system-rpc-runtime-api 32.0.0",
  "frame-try-runtime 0.40.0",
  "hex-literal",
- "lending",
  "log",
+ "pallet-assets 35.0.0",
  "pallet-aura",
  "pallet-authorship",
  "pallet-balances 35.0.0",
  "pallet-collator-selection",
+ "pallet-lending",
  "pallet-message-queue",
  "pallet-parachain-template",
  "pallet-session",
@@ -15765,7 +15766,7 @@ version = "0.51.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ca229916c5ee38c2f2bc1e9d8f04df975b4bd93f9955dc69fabb5d91270045c9"
 dependencies = [
- "windows-core 0.51.1",
+ "windows-core",
  "windows-targets 0.48.5",
 ]
 
@@ -15776,15 +15777,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f1f8cf84f35d2db49a46868f947758c7a1138116f7fac3bc844f43ade1292e64"
 dependencies = [
  "windows-targets 0.48.5",
-]
-
-[[package]]
-name = "windows-core"
-version = "0.52.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "33ab640c8d7e35bf8ba19b884ba838ceb4fba93a4e8c65a9059d08afcfc683d9"
-dependencies = [
- "windows-targets 0.52.5",
 ]
 
 [[package]]

@@ -329,20 +329,6 @@ impl pallet_parachain_template::Config for Runtime {
 }
 
 parameter_types! {
-	pub const LendingPalletId: PalletId = PalletId(*b"kylix_id");
-}
-
-/// Configure the lending in pallets/lending.
-impl lending::Config for Runtime {
-	type RuntimeEvent = RuntimeEvent;
-	type WeightInfo = lending::weights::SubstrateWeight<Runtime>;
-	type NativeBalance = Balances;
-	type Fungibles = Assets;
-	type PalletId = LendingPalletId;
-	type Time = lending::Timestamp;
-}
-
-parameter_types! {
 	pub const AssetDeposit: Balance = 100;
 	pub const ApprovalDeposit: Balance = 1;
 	pub const StringLimit: u32 = 50;
@@ -371,4 +357,18 @@ impl pallet_assets::Config for Runtime {
 	type CallbackHandle = ();
 	#[cfg(feature = "runtime-benchmarks")]
 	type BenchmarkHelper = ();
+}
+
+parameter_types! {
+	pub const LendingPalletId: PalletId = PalletId(*b"kylix_id");
+}
+
+/// Configure the lending in pallets/lending.
+impl pallet_lending::Config for Runtime {
+	type RuntimeEvent = RuntimeEvent;
+	type WeightInfo = pallet_lending::weights::SubstrateWeight<Runtime>;
+	type NativeBalance = Balances;
+	type Fungibles = Assets;
+	type PalletId = LendingPalletId;
+	type Time = Timestamp;
 }

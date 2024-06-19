@@ -32,7 +32,7 @@ docify = "0.2.8"
 
 # Local
 pallet-parachain-template = { path = "../pallets/template", default-features = false, version = "0.1.0" }
-lending = { path = "../pallets/lending", version = "4.0.0-dev", default-features = false }
+pallet-lending = { path = "../pallets/lending", default-features = false }
 
 # Substrate / FRAME
 frame-benchmarking = { version = "34.0.0", default-features = false, optional = true }
@@ -45,6 +45,7 @@ frame-try-runtime = { version = "0.40.0", default-features = false, optional = t
 
 # FRAME Pallets
 pallet-aura = { version = "33.0.0", default-features = false }
+pallet-assets = { version = "35.0.0", default-features = false }
 pallet-authorship = { version = "34.0.0", default-features = false }
 pallet-balances = { version = "35.0.0", default-features = false }
 pallet-message-queue = { version = "37.0.0", default-features = false }
@@ -112,12 +113,13 @@ std = [
 	"frame-try-runtime?/std",
 	"log/std",
 	"pallet-aura/std",
+	"pallet-assets/std",
 	"pallet-authorship/std",
 	"pallet-balances/std",
 	"pallet-collator-selection/std",
 	"pallet-message-queue/std",
 	"pallet-parachain-template/std",
-	"lending/std",
+	"pallet-lending/std",
 	"pallet-session/std",
 	"pallet-sudo/std",
 	"pallet-timestamp/std",
@@ -162,7 +164,8 @@ runtime-benchmarks = [
 	"pallet-collator-selection/runtime-benchmarks",
 	"pallet-message-queue/runtime-benchmarks",
 	"pallet-parachain-template/runtime-benchmarks",
-	"lending/runtime-benchmarks",
+	"pallet-lending/runtime-benchmarks",
+	"pallet-assets/runtime-benchmarks",
 	"pallet-sudo/runtime-benchmarks",
 	"pallet-timestamp/runtime-benchmarks",
 	"pallet-xcm/runtime-benchmarks",
@@ -189,7 +192,8 @@ try-runtime = [
 	"pallet-collator-selection/try-runtime",
 	"pallet-message-queue/try-runtime",
 	"pallet-parachain-template/try-runtime",
-	"lending/try-runtime",
+	"pallet-lending/try-runtime",
+	"pallet-assets/try-runtime",
 	"pallet-session/try-runtime",
 	"pallet-sudo/try-runtime",
 	"pallet-timestamp/try-runtime",

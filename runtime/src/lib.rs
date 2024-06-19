@@ -45,7 +45,7 @@ use weights::ExtrinsicBaseWeight;
 pub use pallet_parachain_template;
 
 /// Import the lending pallet.
-pub use lending;
+pub use pallet_lending;
 
 /// Alias to 512-bit hash when used in the context of a transaction signature on the chain.
 pub type Signature = MultiSignature;
@@ -249,7 +249,7 @@ construct_runtime!(
 		// Monetary stuff.
 		Balances: pallet_balances = 10,
 		TransactionPayment: pallet_transaction_payment = 11,
-		//Assets: pallet_assets = 12
+		Assets: pallet_assets = 12,
 		
 		// Governance
 		Sudo: pallet_sudo = 15,
@@ -269,7 +269,7 @@ construct_runtime!(
 
 		// Template
 		TemplatePallet: pallet_parachain_template = 50,
-		//Lending: lending = 51,
+		Lending: pallet_lending = 51,
 	}
 );
 
