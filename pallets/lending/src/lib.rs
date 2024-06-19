@@ -1,5 +1,4 @@
 #![cfg_attr(not(feature = "std"), no_std)]
-
 ///! # The Lending pallet of Kylix
 ///!
 ///! ## Overview
